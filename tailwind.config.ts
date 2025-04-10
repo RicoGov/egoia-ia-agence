@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -25,13 +26,16 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: 'hsl(var(--primary))',
+					DEFAULT: '#3B82F6',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: 'hsl(var(--secondary))',
+					DEFAULT: '#8B5CF6',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				dark: '#1E293B',
+				light: '#F8FAFC',
+				accent: '#EC4899',
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -68,6 +72,10 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Poppins', 'sans-serif'],
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -84,11 +92,53 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				floating: {
+					'0%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-15px)' },
+					'100%': { transform: 'translateY(0px)' },
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				bounce: {
+					'0%, 20%, 50%, 80%, 100%': { transform: 'translateY(0)' },
+					'40%': { transform: 'translateY(-20px)' },
+					'60%': { transform: 'translateY(-10px)' },
+				},
+				blob: {
+					'0%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+					'33%': {
+						transform: 'translate(30px, -50px) scale(1.1)',
+					},
+					'66%': {
+						transform: 'translate(-20px, 20px) scale(0.9)',
+					},
+					'100%': {
+						transform: 'translate(0px, 0px) scale(1)',
+					},
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'floating': 'floating 6s ease-in-out infinite',
+				'floating-delay-1': 'floating 6s ease-in-out 1s infinite',
+				'floating-delay-2': 'floating 6s ease-in-out 2s infinite',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'bounce': 'bounce 2s infinite',
+				'blob': 'blob 7s infinite',
+				'blob-delay-2000': 'blob 7s infinite 2s',
+				'blob-delay-4000': 'blob 7s infinite 4s',
 			}
 		}
 	},
