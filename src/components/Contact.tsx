@@ -39,7 +39,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Email</h3>
-                <p className="text-gray-600">ricogov@gmail.com</p>
+                <p className="text-gray-600">ericgoevelinger@gmail.com</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -48,7 +48,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Bureau</h3>
-                <p className="text-gray-600">Villeurbanne, France</p>
+                <p className="text-gray-600">Marolles-en-Brie 94440</p>
               </div>
             </div>
           </div>
